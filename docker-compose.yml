@@ -1,0 +1,13 @@
+services:
+  bot:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./app:/app/app
+      - ./cmd:/app/cmd
+    command: air cmd/start.go
+
+networks:
+  costa-dash:
+    driver: bridge
