@@ -7,7 +7,3 @@ services:
       - ./app:/app/app
       - ./cmd:/app/cmd
     command: air cmd/start.go
-
-networks:
-  costa-dash:
-    driver: bridge

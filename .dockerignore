@@ -1,0 +1,14 @@
+# git
+.gitignore
+.git
+.github
+.gitmodules
+
+# docker
+.dockerignore
+docker-compose.yml
+Dockerfile
+
+# random
+README.md
+LICENSE
