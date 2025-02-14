@@ -12,6 +12,8 @@ func SendUserMessage(discord *discordgo.Session, channelID string, user string, 
 }
 
 func DiscordRespondWithError(discord *discordgo.Session, interaction *discordgo.InteractionCreate, responseError string) error {
+	log.Printf("-> %s: %s", interaction.Member.User.Username, responseError)
+
 	return discord.InteractionRespond(interaction.Interaction, &discordgo.InteractionResponse{
 		Type: discordgo.InteractionResponseChannelMessageWithSource,
 		Data: &discordgo.InteractionResponseData{
