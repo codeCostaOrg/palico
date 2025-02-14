@@ -14,4 +14,12 @@ const (
 
 	SHOCK_TRAP_ICON   = "<:shock_trap_icon:1339718475244896430>"
 	PITFALL_TRAP_ICON = "<:pitfall_trap_icon:1339718463924469892>"
+
+	ANTIDOTE_ICON        = "<:antidote_icon:1340067041691828285>"
+	ARMORSKIN_ICON       = "<:armorskin_icon:1340067068380315680>"
+	CLEANSER_ICON        = "<:cleanser_icon:1340067079809667152>"
+	DEODORANT_ICON       = "<:deodorant_icon:1340067093370114120>"
+	HERBAL_MEDICINE_ICON = "<:herbal_medicine_icon:1340067107332821122>"
+	MEGA_ARMORSKIN_ICON  = "<:mega_armorskin_icon:1340067118930198690>"
+	NULBERRY_ICON        = "<:nulberry_icon:1340067131169046559>"
 )
