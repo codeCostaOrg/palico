@@ -6,6 +6,7 @@ const (
 	AJARAKAN    Monster = "Ajarakan"
 	ARKVELD     Monster = "Arkveld"
 	BALAHARA    Monster = "Balahara"
+	BLANGONGA   Monster = "Blangonga"
 	CHATACABRA  Monster = "Chatacabra"
 	CONGALALA   Monster = "Congalala"
 	DOSHAGUMA   Monster = "Doshaguma"
@@ -31,6 +32,7 @@ var MonsterList = []Monster{
 	AJARAKAN,
 	ARKVELD,
 	BALAHARA,
+	BLANGONGA,
 	CHATACABRA,
 	CONGALALA,
 	DOSHAGUMA,
