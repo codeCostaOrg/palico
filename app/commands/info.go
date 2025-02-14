@@ -21,6 +21,12 @@ func GetMonsterInfo(discord *discordgo.Session, interaction *discordgo.Interacti
 		return
 	}
 
+	// FIXME: this is temporary until we get all the data
+	description := "UNKNOWN"
+	if res.Description != "" {
+		description = res.Description
+	}
+
 	// embed image
 	embeds := []*discordgo.MessageEmbed{
 		{
@@ -31,7 +37,7 @@ func GetMonsterInfo(discord *discordgo.Session, interaction *discordgo.Interacti
 			Thumbnail: &discordgo.MessageEmbedThumbnail{
 				URL: res.AvatarURL,
 			},
-			Description: "**This is currently a Work In Progress. Some information may be missing or incorrect. Please contact the admins if you have any information to add.**",
+			Description: description,
 			Fields: []*discordgo.MessageEmbedField{
 				{
 					Name:   "Element",
@@ -58,7 +64,7 @@ func GetMonsterInfo(discord *discordgo.Session, interaction *discordgo.Interacti
 				},
 			},
 			Footer: &discordgo.MessageEmbedFooter{
-				Text: string(res.Size) + " " + string(res.Species),
+				Text: "This is currently a Work In Progress. Some information may be missing or incorrect. Please contact the admins if you have any information to add.",
 			},
 		},
 	}
