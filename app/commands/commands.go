@@ -1,7 +1,6 @@
 package commands
 
 import (
-	"codecosta.com/palico/app/models"
 	"codecosta.com/palico/app/utils"
 	"github.com/bwmarrin/discordgo"
 )
@@ -15,24 +14,14 @@ var CommandList = []*discordgo.ApplicationCommand{
 				Name:        "monster",
 				Description: "Monster Name",
 				Type:        discordgo.ApplicationCommandOptionString,
-				Choices: []*discordgo.ApplicationCommandOptionChoice{
-					{
-						Name:  string(models.RATHALOS),
-						Value: models.RATHALOS,
-					},
-				},
-				Required: true,
+				Choices:     utils.InfoCommandChoices(),
+				Required:    true,
 			},
 		},
-	},
-	{
-		Name:        "test",
-		Description: "Test command",
 	},
 }
 
 var CommandHandlers = map[string]func(discord *discordgo.Session, interaction *discordgo.InteractionCreate){
-	"test": test,
 	"info": GetMonsterInfo,
 }
 
